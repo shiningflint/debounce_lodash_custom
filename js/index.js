@@ -11,6 +11,7 @@ function ArrowInit(arrowStr) {
 }
 
 function toggleArrow(elm) {
+  console.log("triggered");
   var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
   if (scrollTop > 200) {
     elm.classList.add("active");
@@ -24,3 +25,5 @@ function scrollPos() {
   var scroll = elm.getBoundingClientRect();
   console.log(scroll);
 }
+
+window.addEventListener("scroll", function() {console.log("bananas");}, false);
